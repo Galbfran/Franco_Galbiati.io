@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Roboto+Mono:wght@300;400&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #0efff9;
+  font-family: 'Caveat', cursive;
+  font-family: 'Roboto Mono', monospace;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  background-image: url('./multimedia/franco-galbiati.png');
+  background-size: cover; /* Ajustar el tamaño de la imagen para cubrir todo el fondo */
+  background-repeat: no-repeat; 
+  background-position: center;
+}
+
+.color1 {color: #140f07;}
+.color2 {color: #102848;}
+.color3 {color: #096ab2;}
+.color4 {color: #08b5ff;}
+.color5 {color: #0efff9;}
