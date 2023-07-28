@@ -10,6 +10,9 @@ const Navbar = () => {
             <button>
                 <Link to='/calculadora'>Calculadora</Link>
             </button>
+            <button>
+                <Link to='/todolist'>ToDoList</Link>
+            </button>
         </nav>
     )
 }

@@ -4,6 +4,7 @@ import Numeros from './Numeros';
 import Resultado from './Resultado';
 import Signos from './Signos';
 import Contacto from '../Inicio/Contacto';
+import Texto from './Texto';
 
 import {useState } from 'react'
 
@@ -69,12 +70,15 @@ const Calculadora = () => {
     return(
         <article className={styles.article}>
             <section className={styles.section}>
+                <Texto/>
+            </section>
+            <section className={styles.section}>
                 <Resultado  primerNumero={primerNumero} segundoNumero={segundoNumero} operacion={operacion} resultado={resultado}/>
                 <div className={styles.container}>
                     <Numeros handlerNumeros={handlerNumeros}/>
                     <Signos handlerSignos={handlerOperacion}/>
                 </div>
-                <CeroIgual operacion={operacion} handlerResultado={handlerResultado} handlerBorrar={handlerBorrar} handlerReset={handlerReset}/>
+                <CeroIgual operacion={operacion} handlerResultado={handlerResultado} handlerBorrar={handlerBorrar} handlerReset={handlerReset} handlerNumeros={handlerNumeros} />
             </section>
             <div className={styles.section} >
                 <Contacto/>
