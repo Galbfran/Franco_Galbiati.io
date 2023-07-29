@@ -6,13 +6,18 @@ import TextoToDo from './Texto'
 import Contacto from '../Inicio/Contacto'
 import {useState} from 'react'
 
-
+interface Tareas{
+    tarea:string,
+    estado:string
+    creacion:string,
+    estimado:string
+}
 
 const ToDoList = () => {
-    const [tareas , setTareas] = useState([])
-    const [tareasRealizada , setTareasRealizda] = useState([])
+    const [tareas , setTareas] = useState<Tareas[]>([])
+    const [tareasRealizada , setTareasRealizda] = useState<Tareas[]>([])
 
-    const handlerSubmit = (tarea , tiempo) => {
+    const handlerSubmit = (tarea:string , tiempo:string) => {
         const nuevaTarea = {
             tarea: tarea,
             estado: 'pendiente',
@@ -22,7 +27,7 @@ const ToDoList = () => {
         setTareas([...tareas, nuevaTarea]);
     }
 
-    const handlerRealizado = (index) => {
+    const handlerRealizado = (index:number) => {
         const tareaRealizada = tareas[index];
         tareaRealizada.estado = 'realizada';
         tareaRealizada.estimado = obtenerHoraActual()
@@ -48,13 +53,28 @@ const ToDoList = () => {
             <section className={styles.section}>
                 <h3>Pendientes:</h3>
                 {
-                    tareas.map((tarea , index) => <TareasPendientes TareasProps={tarea} key={index} index={index} handlerRealizado={handlerRealizado}/>)
+                    tareas.map((tarea , index) => <TareasPendientes  
+                        tarea={tarea.tarea}
+                        estado={tarea.estado}
+                        creacion={tarea.creacion}
+                        estimado={tarea.estimado}
+                        handlerRealizado={handlerRealizado} // Pasar la función handlerRealizado si es necesaria
+                        index={index}
+                    />)
                 }
             </section>
             <section className={styles.section}>
                 <h3>Realizadas:</h3>
                 {
-                    tareasRealizada.map((tarea , index) => <TareasPendientes TareasProps={tarea} key={index} handlerRealizado={handlerRealizado}/>)
+                    tareasRealizada.map((tarea , index) => <TareasPendientes 
+                        key={index}
+                        tarea={tarea.tarea}
+                        estado={tarea.estado}
+                        creacion={tarea.creacion}
+                        estimado={tarea.estimado}
+                        handlerRealizado={handlerRealizado} // Pasar la función handlerRealizado si es necesaria
+                        index={index}
+                    />)
                 }
             </section>
             <section className={styles.section}>

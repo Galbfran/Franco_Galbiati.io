@@ -1,10 +1,22 @@
 import styles from './ToDoList.module.css';
 
+interface Tareas{
+    tarea:string,
+    estado:string
+    creacion:string,
+    estimado:string
+}
+
+interface Index{
+    index:number
+}
+
+interface Handler{
+    handlerRealizado: (num:number) => void;
+}
 
 
-
-const TareasPendientes = ({ TareasProps , handlerRealizado , index}) => {
-    const { tarea, estado, creacion, estimado } = TareasProps;
+const TareasPendientes: React.FC<Tareas & Handler & Index> = ({ tarea, estado, creacion, estimado, handlerRealizado, index }) => {
     return (
         <div className={styles.tarea}>
             <p>{tarea}</p>
