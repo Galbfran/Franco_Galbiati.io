@@ -10,9 +10,7 @@ const Inicio = () => {
             <h3>Javascript | Html | Css | React-js | Redux | Node-js</h3>
             <section className={styles.section}>
                 <p>Desarrollador Full Stack con formación en Henry, donde estoy estudiando para convertirme en un 
-                experto en desarrollo web. Aunque no tengo experiencia previa en tecnología, mis conocimientos 
-                y habilidades adquiridas en Henry me han brindado una base sólida para desempeñarme como 
-                profesional.
+                experto en desarrollo web.
                 Mi formación en Henry me ha permitido adquirir competencias valiosas, como trabajar en equipo 
                 de manera colaborativa y analizar datos de manera eficiente. Además, estoy especializado en el 
                 desarrollo de aplicaciones web, tanto en el Front-end como en el Back-end. Mis conocimientos 
