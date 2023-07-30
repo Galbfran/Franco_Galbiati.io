@@ -11,9 +11,7 @@ const PostTareas: React.FC<SubmitProps>  = ({handlerSubmit}) => {
 
     const submit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        // Llama a la función 'handlerSubmit' pasándole los valores de tarea y tiempo
-        handlerSubmit(tarea, tiempo);
-        // Limpia los inputs después de enviar el formulario
+        handlerSubmit(tarea, tiempo+' minutos');
         setTarea('');
         setTiempo('');
     };
@@ -26,15 +24,19 @@ const PostTareas: React.FC<SubmitProps>  = ({handlerSubmit}) => {
                 <input 
                     type="text"
                     id="tarea"
+                    placeholder='tarea a realizar'
                     value={tarea}
+                    autoComplete="off"
                     onChange={(e) => setTarea(e.target.value)}/>
             </div>
             <div className={styles.input} >
                 <label htmlFor="tiempo">Tiempo Estimado</label>
-                <input  
+                <input 
                     type="text"
                     id="tiempo"
+                    placeholder='minutos'
                     value={tiempo}
+                    autoComplete="off"
                     onChange={(e) => setTiempo(e.target.value)}/>
             </div>
             <div className={styles.input}>

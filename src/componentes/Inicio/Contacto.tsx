@@ -12,7 +12,7 @@ const Contacto = () => {
             nombre:'Mail'
         },
         {
-            url:'54-11-6227-1014',
+            url:'+54 11 6227 1014',
             nombre:'Telefono'
         },
         {
