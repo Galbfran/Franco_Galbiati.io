@@ -13,6 +13,9 @@ const Navbar = () => {
             <button>
                 <Link to='/todolist'>ToDoList</Link>
             </button>
+            <button>
+                <Link to='/fetchdatos'>Fetch Datos</Link>
+            </button>
         </nav>
     )
 }
