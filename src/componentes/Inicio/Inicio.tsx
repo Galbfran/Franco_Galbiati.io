@@ -2,7 +2,7 @@ import styles from './Inicio.module.css'
 import 'animate.css';
 import Tecnologias from './Tecnologias';
 import Contacto from './Contacto';
-
+import Proyectos from '../Proyectos/Proyectos';
 const Inicio = () => {
     return(
         <article className={styles.article}>
@@ -17,6 +17,9 @@ const Inicio = () => {
                 incluyen metodologías ágiles, GIT, estructura de datos, algoritmos y frameworks CSS, entre 
                 otros.
                 </p>
+            </section>
+            <section className={styles.section}>
+                <Proyectos/>
             </section>
             <section className={styles.section}>
                 <h3>Tecnologias Aprendidas:</h3>
