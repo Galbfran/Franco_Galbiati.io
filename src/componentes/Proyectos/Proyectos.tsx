@@ -1,6 +1,5 @@
 
 import style from "./Proyectos.module.css"
-import CardTecno from "../Inicio/CardTecno";
 const Proyectos = () => {
     return (
         <div className={style.proyectos}>
